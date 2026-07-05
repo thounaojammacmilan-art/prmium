@@ -1,0 +1,157 @@
+export const SITE_NAME = "StreamVista";
+export const SITE_DESCRIPTION = "Discover and watch your favorite videos in a premium streaming experience";
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
+export const YOUTUBE_API_KEY = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY || "";
+export const USE_MOCK_DATA = process.env.NEXT_PUBLIC_USE_MOCK_DATA === "true";
+
+export const API_BASE_URL = "https://www.googleapis.com/youtube/v3";
+
+export const PLAYBACK_SPEEDS = [0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2];
+
+export const VIDEO_CATEGORIES = [
+  { id: "1", title: "Film & Animation" },
+  { id: "2", title: "Autos & Vehicles" },
+  { id: "10", title: "Music" },
+  { id: "15", title: "Pets & Animals" },
+  { id: "17", title: "Sports" },
+  { id: "18", title: "Short Movies" },
+  { id: "19", title: "Travel & Events" },
+  { id: "20", title: "Gaming" },
+  { id: "21", title: "Videoblogging" },
+  { id: "22", title: "People & Blogs" },
+  { id: "23", title: "Comedy" },
+  { id: "24", title: "Entertainment" },
+  { id: "25", title: "News & Politics" },
+  { id: "26", title: "Howto & Style" },
+  { id: "27", title: "Education" },
+  { id: "28", title: "Science & Technology" },
+  { id: "29", title: "Nonprofits & Activism" },
+];
+
+export const NAV_ITEMS = [
+  { label: "Home", href: "/", icon: "Home" },
+  { label: "Trending", href: "/trending", icon: "TrendingUp" },
+  { label: "Categories", href: "/categories", icon: "Grid3X3" },
+  { label: "History", href: "/history", icon: "History" },
+  { label: "Watch Later", href: "/watch-later", icon: "Clock" },
+  { label: "Favorites", href: "/favorites", icon: "Heart" },
+  { label: "Settings", href: "/settings", icon: "Settings" },
+  { label: "About", href: "/about", icon: "Info" },
+];
+
+export const STORAGE_KEYS = {
+  HISTORY: "sv_history",
+  WATCH_LATER: "sv_watch_later",
+  FAVORITES: "sv_favorites",
+  SEARCH_HISTORY: "sv_search_history",
+  SETTINGS: "sv_settings",
+  CONTINUE_WATCHING: "sv_continue_watching",
+};
+
+export const MOCK_VIDEOS: import("@/types").Video[] = [
+  {
+    id: "dQw4w9WgXcQ",
+    title: "Never Gonna Give You Up - Rick Astley",
+    description: "The classic Rick Roll video that started it all. Official music video.",
+    thumbnail: { default: "", medium: "", high: "" },
+    channelTitle: "Rick Astley",
+    channelId: "UCuAXFkgsw1L7xaCfnd5JJOw",
+    publishedAt: "2009-10-25T06:57:33Z",
+    duration: "3:33",
+    durationSeconds: 213,
+    viewCount: 1500000000,
+    likeCount: 12000000,
+  },
+  {
+    id: "jNQXAC9IVRw",
+    title: "Me at the zoo",
+    description: "The first ever YouTube video, uploaded on April 23, 2005.",
+    thumbnail: { default: "", medium: "", high: "" },
+    channelTitle: "Jawed",
+    channelId: "UC4QobU6STFB0P71PMvT1jbQ",
+    publishedAt: "2005-04-23T22:13:12Z",
+    duration: "0:19",
+    durationSeconds: 19,
+    viewCount: 350000000,
+    likeCount: 5000000,
+  },
+  {
+    id: "9bZkp7q19f0",
+    title: "PSY - GANGNAM STYLE",
+    description: "The music video that broke YouTube with over 4 billion views.",
+    thumbnail: { default: "", medium: "", high: "" },
+    channelTitle: "officialpsy",
+    channelId: "UCrP1iCUgR40MxZmIFvjWcVQ",
+    publishedAt: "2012-07-15T07:23:14Z",
+    duration: "4:13",
+    durationSeconds: 253,
+    viewCount: 4900000000,
+    likeCount: 18000000,
+  },
+  {
+    id: "kJQP7kiw5Fk",
+    title: "Luis Fonsi - Despacito ft. Daddy Yankee",
+    description: "The most viewed YouTube video of all time.",
+    thumbnail: { default: "", medium: "", high: "" },
+    channelTitle: "LuisFonsiVEVO",
+    channelId: "UCGMdX5vXKOIq7JInaV5FIJg",
+    publishedAt: "2017-01-13T03:47:12Z",
+    duration: "4:42",
+    durationSeconds: 282,
+    viewCount: 8500000000,
+    likeCount: 52000000,
+  },
+  {
+    id: "JGwWNGJdvx8",
+    title: "Ed Sheeran - Shape of You [Official Music Video]",
+    description: "Official music video for Shape of You by Ed Sheeran.",
+    thumbnail: { default: "", medium: "", high: "" },
+    channelTitle: "Ed Sheeran",
+    channelId: "UC0C-w0YjGpqDXGB8IHb662A",
+    publishedAt: "2017-01-30T17:00:02Z",
+    duration: "4:24",
+    durationSeconds: 264,
+    viewCount: 6200000000,
+    likeCount: 32000000,
+  },
+  {
+    id: "RgKAFK5djSk",
+    title: "Wiz Khalifa - See You Again ft. Charlie Puth [Official Video]",
+    description: "Official music video for See You Again featuring Charlie Puth.",
+    thumbnail: { default: "", medium: "", high: "" },
+    channelTitle: "WizKhalifa",
+    channelId: "UCeYhF3h0lRyAQVDdQNPRsQA",
+    publishedAt: "2015-04-06T21:26:40Z",
+    duration: "4:34",
+    durationSeconds: 274,
+    viewCount: 6100000000,
+    likeCount: 29000000,
+  },
+  {
+    id: "OPf0YbXqDm0",
+    title: "Mark Ronson - Uptown Funk (Official Video) ft. Bruno Mars",
+    description: "Official music video for Uptown Funk by Mark Ronson featuring Bruno Mars.",
+    thumbnail: { default: "", medium: "", high: "" },
+    channelTitle: "MarkRonsonVEVO",
+    channelId: "UCn8mMq9qH85sLwSef7Ue-0g",
+    publishedAt: "2014-11-19T14:00:02Z",
+    duration: "4:34",
+    durationSeconds: 274,
+    viewCount: 5100000000,
+    likeCount: 26000000,
+  },
+  {
+    id: "HP-MbfHFUqs",
+    title: "Taylor Swift - Shake It Off",
+    description: "Official music video for Shake It Off by Taylor Swift.",
+    thumbnail: { default: "", medium: "", high: "" },
+    channelTitle: "TaylorSwiftVEVO",
+    channelId: "UCqECaJ8Gagnn7YCb5zU3VTA",
+    publishedAt: "2014-08-18T14:00:01Z",
+    duration: "4:02",
+    durationSeconds: 242,
+    viewCount: 3400000000,
+    likeCount: 18000000,
+  },
+];
