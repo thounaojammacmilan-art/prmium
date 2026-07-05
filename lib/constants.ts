@@ -1,9 +1,11 @@
 export const SITE_NAME = "StreamVista";
-export const SITE_DESCRIPTION = "Discover and watch your favorite videos in a premium streaming experience";
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+export const SITE_DESCRIPTION =
+  "Discover and watch your favorite videos in a premium streaming experience";
+export const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
 export const YOUTUBE_API_KEY = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY || "";
-export const USE_MOCK_DATA = process.env.NEXT_PUBLIC_USE_MOCK_DATA === "true";
+export const USE_MOCK_DATA = process.env.NEXT_PUBLIC_USE_MOCK_DATA !== "false";
 
 export const API_BASE_URL = "https://www.googleapis.com/youtube/v3";
 
@@ -53,7 +55,8 @@ export const MOCK_VIDEOS: import("@/types").Video[] = [
   {
     id: "dQw4w9WgXcQ",
     title: "Never Gonna Give You Up - Rick Astley",
-    description: "The classic Rick Roll video that started it all. Official music video.",
+    description:
+      "The classic Rick Roll video that started it all. Official music video.",
     thumbnail: { default: "", medium: "", high: "" },
     channelTitle: "Rick Astley",
     channelId: "UCuAXFkgsw1L7xaCfnd5JJOw",
@@ -79,7 +82,8 @@ export const MOCK_VIDEOS: import("@/types").Video[] = [
   {
     id: "9bZkp7q19f0",
     title: "PSY - GANGNAM STYLE",
-    description: "The music video that broke YouTube with over 4 billion views.",
+    description:
+      "The music video that broke YouTube with over 4 billion views.",
     thumbnail: { default: "", medium: "", high: "" },
     channelTitle: "officialpsy",
     channelId: "UCrP1iCUgR40MxZmIFvjWcVQ",
@@ -118,7 +122,8 @@ export const MOCK_VIDEOS: import("@/types").Video[] = [
   {
     id: "RgKAFK5djSk",
     title: "Wiz Khalifa - See You Again ft. Charlie Puth [Official Video]",
-    description: "Official music video for See You Again featuring Charlie Puth.",
+    description:
+      "Official music video for See You Again featuring Charlie Puth.",
     thumbnail: { default: "", medium: "", high: "" },
     channelTitle: "WizKhalifa",
     channelId: "UCeYhF3h0lRyAQVDdQNPRsQA",
@@ -131,7 +136,8 @@ export const MOCK_VIDEOS: import("@/types").Video[] = [
   {
     id: "OPf0YbXqDm0",
     title: "Mark Ronson - Uptown Funk (Official Video) ft. Bruno Mars",
-    description: "Official music video for Uptown Funk by Mark Ronson featuring Bruno Mars.",
+    description:
+      "Official music video for Uptown Funk by Mark Ronson featuring Bruno Mars.",
     thumbnail: { default: "", medium: "", high: "" },
     channelTitle: "MarkRonsonVEVO",
     channelId: "UCn8mMq9qH85sLwSef7Ue-0g",
